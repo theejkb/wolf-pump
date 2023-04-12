@@ -10,6 +10,19 @@
   background-size: cover;
   font-family: Dopestyle, serif;
 
+  .woof-time{
+    font-family: Gobold, sans-serif;
+    position: absolute;
+    bottom: 150px;
+    -webkit-animation: puff-in-center 1s cubic-bezier(0.075, 0.820, 0.165, 1.000) 2.7s both;
+    animation: puff-in-center 1s cubic-bezier(0.075, 0.820, 0.165, 1.000) 2.7s both;
+  }
+
+  h2{
+    -webkit-animation: puff-in-center 1s cubic-bezier(0.075, 0.820, 0.165, 1.000) 3.25s both;
+    animation: puff-in-center 1s cubic-bezier(0.075, 0.820, 0.165, 1.000) 3.25s both;
+  }
+
   .title-primary{
     -webkit-animation: tracking-in-expand 1s cubic-bezier(0.075, 0.820, 0.165, 1.000) 1.5s backwards;
     animation: tracking-in-expand 1s cubic-bezier(0.075, 0.820, 0.165, 1.000) 1.5s backwards;

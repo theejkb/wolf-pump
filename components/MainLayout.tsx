@@ -18,12 +18,11 @@ export const MainLayout: FC<PropsWithChildren<MetaHeadProps>> = ({
         metaImage={metaImage}
         metaUrl={metaUrl}
       />
-      <Box minHeight="calc(100vh - 120px)" pb="48">
+      <Box minHeight="calc(100vh - 120px)">
         <Container width='100%' maxW='100%' margin={0} padding={0}>
           <Box>{children}</Box>
         </Container>
       </Box>
-      <Footer />
     </>
   );
 };

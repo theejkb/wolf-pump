@@ -1,0 +1,21 @@
+@import "fonts";
+@import "hero";
+@import "button";
+@import "variables";
+@import "header";
+@import "about";
+@import "faq";
+
+*, html {
+  scroll-behavior: smooth !important;
+}
+
+h2{
+  font-family: "Dopestyle", serif;
+}
+
+a, button {
+  font-family: Gobold, serif !important;
+  font-weight: 400 !important;
+}
+

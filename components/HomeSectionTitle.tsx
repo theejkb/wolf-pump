@@ -7,6 +7,10 @@ interface HomeSectionTitleProps {
 
 export const HomeSectionTitle: FC<HomeSectionTitleProps> = ({ title }) => {
   return (
+    <Box
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out">
     <Text
       as="h2"
       fontSize={{ base: '5xl', lg: '7xl' }}
@@ -15,13 +19,7 @@ export const HomeSectionTitle: FC<HomeSectionTitleProps> = ({ title }) => {
       textAlign="center"
     >
       {title}{' '}
-      <Box
-        as="span"
-        width={5}
-        height={5}
-        display="inline-block"
-        backgroundColor="elvenTools.color3.base"
-      />
     </Text>
+    </Box>
   );
 };

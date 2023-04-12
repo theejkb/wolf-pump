@@ -19,7 +19,7 @@ export const MainLayout: FC<PropsWithChildren<MetaHeadProps>> = ({
         metaUrl={metaUrl}
       />
       <Box minHeight="calc(100vh - 120px)" pb="48">
-        <Container maxW="container.xl">
+        <Container width='100%' maxW='100%' margin={0} padding={0}>
           <Box>{children}</Box>
         </Container>
       </Box>

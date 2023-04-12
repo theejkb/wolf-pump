@@ -1,0 +1,198 @@
+@import "variables";
+
+#about-the-pack {
+  background: #050801;
+  border-top: 2px solid $primary;
+  border-bottom: 2px solid $primary;
+  min-height: 100vh;
+  font-family: Quicksand, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  .stack {
+    z-index: 10;
+  }
+
+  a.btn-primary {
+    margin-top: 75px;
+    z-index: 10;
+  }
+
+  .item {
+    transition: 0.25s ease-out;
+
+    h2 {
+      transition: .3s ease-out;
+    }
+
+    mark {
+      background: rgba($primary, 0.75);
+      padding: 2px 5px;
+      border-radius: 4px;
+      color: white;
+      transition: .3s;
+    }
+
+    &:hover {
+      box-shadow: 0 0 5px rgba($primary, 0.2),
+      0 0 25px rgba($primary, 0.2),
+      0 0 50px rgba($primary, 0.2);
+      border: 1px solid $primary;
+
+      h2 {
+        color: $primary;
+      }
+    }
+  }
+
+  .background-moving {
+    opacity: 0.35;
+    position: relative;
+
+    span {
+      width: 44vmin;
+      height: 44vmin;
+      border-radius: 44vmin;
+      backface-visibility: hidden;
+      position: absolute;
+      animation: move;
+      animation-duration: 10;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      opacity: 0.7;
+      z-index: 0;
+    }
+
+
+    span:nth-child(0) {
+      color: #00ffee;
+      top: 76%;
+      left: 69%;
+      animation-duration: 69s;
+      animation-delay: -304s;
+      transform-origin: 18vw -16vh;
+      box-shadow: -88vmin 0 11.458215180584194vmin currentColor;
+    }
+
+    span:nth-child(1) {
+      color: #00ffee;
+      top: 43%;
+      left: 11%;
+      animation-duration: 111s;
+      animation-delay: -250s;
+      transform-origin: 20vw 14vh;
+      box-shadow: 88vmin 0 11.651894391916201vmin currentColor;
+    }
+
+    span:nth-child(2) {
+      color: #00ffee;
+      top: 95%;
+      left: 79%;
+      animation-duration: 242s;
+      animation-delay: -32s;
+      transform-origin: 0vw 10vh;
+      box-shadow: 88vmin 0 11.341714931685964vmin currentColor;
+    }
+
+    span:nth-child(3) {
+      color: #006156;
+      top: 66%;
+      left: 96%;
+      animation-duration: 403s;
+      animation-delay: -92s;
+      transform-origin: -19vw -24vh;
+      box-shadow: -88vmin 0 11.336263095351066vmin currentColor;
+    }
+
+    span:nth-child(4) {
+      color: #006156;
+      top: 12%;
+      left: 64%;
+      animation-duration: 116s;
+      animation-delay: -317s;
+      transform-origin: -8vw -24vh;
+      box-shadow: -88vmin 0 11.559209450869457vmin currentColor;
+    }
+
+    span:nth-child(5) {
+      color: #006156;
+      top: 82%;
+      left: 69%;
+      animation-duration: 171s;
+      animation-delay: -29s;
+      transform-origin: -7vw -1vh;
+      box-shadow: -88vmin 0 11.776861537277615vmin currentColor;
+    }
+
+    span:nth-child(6) {
+      color: #95fcfe;
+      top: 4%;
+      left: 8%;
+      animation-duration: 201s;
+      animation-delay: -265s;
+      transform-origin: 23vw -21vh;
+      box-shadow: 88vmin 0 11.280240493357242vmin currentColor;
+    }
+
+    span:nth-child(7) {
+      color: #00ffee;
+      top: 7%;
+      left: 57%;
+      animation-duration: 36s;
+      animation-delay: -72s;
+      transform-origin: 21vw 8vh;
+      box-shadow: -88vmin 0 11.51493403636856vmin currentColor;
+    }
+
+    span:nth-child(8) {
+      color: #95fcfe;
+      top: 34%;
+      left: 39%;
+      animation-duration: 343s;
+      animation-delay: -398s;
+      transform-origin: -10vw -8vh;
+      box-shadow: -88vmin 0 11.303946533164178vmin currentColor;
+    }
+
+    span:nth-child(9) {
+      color: #00ffee;
+      top: 59%;
+      left: 88%;
+      animation-duration: 79s;
+      animation-delay: -26s;
+      transform-origin: 10vw -7vh;
+      box-shadow: 88vmin 0 11.252449471011534vmin currentColor;
+    }
+  }
+}
+
+.join-pack {
+  .btn {
+    padding: 25px;
+    border-radius: 4px;
+    background: $primary;
+    color: black;
+    font-weight: 900;
+    width: fit-content;
+    margin: 50px auto 0 auto;
+    position: relative;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+  }
+}
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+

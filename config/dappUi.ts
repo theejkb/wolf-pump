@@ -7,10 +7,10 @@ export const dappHostname = process.env.NEXT_PUBLIC_DAPP_HOST;
 
 // HTML metata and og tags, default values for MetaHead.tsx component
 export const defaultMetaTags = {
-  title: 'Elven Tools NFT minter dapp demo - MultiversX blockchain',
+  title: 'Doggos of MultiversX',
   description:
-    'Open source Dapp template for the Elven Tools and MultiversX blockchain. The actual working example is connected to the Elven Tools smart contract deployed on the MultiversX blockchain devnet!',
-  image: `${dappHostname}/og-image.png`,
+    'Official Website of Doggos of MultiversX. Join the pack now and Woof together !',
+  image: `${dappHostname}/DoggosOFMvx.png`,
 };
 
 // FAQ section data
@@ -41,15 +41,15 @@ export const faq = [
 // Roadmap section data
 export const roadmap = [
   {
-    title: 'Q1 2023',
+    title: 'Now',
     points: [
-      'MultiversX rebranding and dependecies replacement',
-      'Nextjs configuration improvements',
-      'Better UI and more functionality',
+      'Project imagination',
+      'Discord, Twitter, Website creation',
+      'Woofmap creation and implementation',
     ],
   },
   {
-    title: 'Q2 2023',
+    title: 'After',
     points: [
       'More helpful docs and videos',
       'More functionality for logged in user',

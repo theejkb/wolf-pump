@@ -1,0 +1,109 @@
+@import "variables";
+
+a {
+  &.btn-primary {
+    font-family: "Gobold", Arial, serif;
+    padding: 15px 30px;
+    background-color: transparent;
+    color: $primary;
+    border: 2px solid $primary;
+    font-weight: bold;
+    border-radius: 4px;
+    letter-spacing: 4px;
+    overflow: hidden;
+    transition: 0.4s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    .icon-wolf {
+      width: 25px;
+      height: 25px;
+      transition: background-image 0.3s ease-in-out;
+
+      &.white {
+        background: url('/wolf-white.png') center center;
+        background-size: cover;
+      }
+
+      &.black {
+        background: url('/wolf-black.png') center center;
+        background-size: cover;
+      }
+
+      &.green {
+        background: url('/wolf-mvx.png') center center;
+        background-size: cover;
+      }
+    }
+
+    &:hover {
+      .icon-wolf {
+        background: url('/wolf-black.png') center center;
+        background-size: cover;
+      }
+    }
+
+    &.white {
+      color: white;
+      border: 2px solid white;
+
+      &:hover {
+        background: white;
+        color: #050801;
+        box-shadow: 0 0 5px white,
+        0 0 25px white,
+        0 0 50px white,
+        0 0 200px $primary;
+      }
+    }
+
+    &.black {
+      color: $black;
+      border: 2px solid $black;
+
+      &:hover {
+        background: $black;
+        color: #050801;
+        box-shadow: 0 0 5px $black,
+        0 0 25px $primary,
+        0 0 50px $black,
+        0 0 200px $primary;
+      }
+    }
+
+    &:hover {
+      background: $primary;
+      color: #050801;
+      box-shadow: 0 0 5px $primary,
+      0 0 25px $primary,
+      0 0 50px $primary,
+      0 0 200px $primary;
+    }
+  }
+
+  &.btn-social {
+    padding: 10px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    cursor: pointer;
+
+    svg {
+      transform: translateY(0) translateX(0);
+      transition: .3s ease-out;
+    }
+
+    &:hover {
+      svg {
+        transform: translateY(-3px) translateX(3px);
+      }
+    }
+  }
+}
+

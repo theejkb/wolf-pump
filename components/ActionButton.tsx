@@ -25,18 +25,23 @@ export const ActionButton: FC<PropsWithChildren<ActionButtonProps>> = ({
   return (
     <Box
       as="button"
-      borderColor="elvenTools.color2.darker"
+      borderColor="elvenTools.mvx"
       borderWidth={2}
       bgColor="transparent"
+      display='flex'
+      alignItems='center'
+      justifyContent='center'
+      gap='10px'
       py={2}
       px={6}
       rounded="xl"
-      fontWeight="normal"
+      fontFamily='Quicksand'
+      fontWeight="bold"
       cursor={disabled ? 'not-allowed' : 'pointer'}
       color="elvenTools.white"
       userSelect="none"
-      _hover={!disabled ? { bg: 'elvenTools.color2.darker' } : {}}
-      transition="background-color .3s"
+      _hover={!disabled ? { bg: 'elvenTools.mvx', color: 'black' } : {}}
+      transition=".25s"
       width={isFullWidth ? '100%' : 'auto'}
       onClick={handleClick}
       opacity={!disabled ? 1 : 0.5}

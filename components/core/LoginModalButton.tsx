@@ -1,22 +1,24 @@
 import {
+  Flex,
   Modal,
-  ModalOverlay,
-  ModalContent,
-  Text,
   ModalBody,
   ModalCloseButton,
-  useDisclosure,
-  Spinner,
-  Flex,
+  ModalContent,
   ModalHeader,
+  ModalOverlay,
+  Spinner,
   Stack,
+  Text,
+  useDisclosure,
 } from '@chakra-ui/react';
-import { FC } from 'react';
-import { ActionButton } from '../ActionButton';
-import { LoginComponent } from './LoginComponent';
-import { useEffectOnlyOnUpdate } from '../../hooks/useEffectOnlyOnUpdate';
-import { getSigningDeviceName } from '../../utils/getSigningDeviceName';
-import { useLogin, useLogout, useLoginInfo } from '@useelven/core';
+import React, {FC} from 'react';
+import {ActionButton} from '../ActionButton';
+import {LoginComponent} from './LoginComponent';
+import {useEffectOnlyOnUpdate} from '../../hooks/useEffectOnlyOnUpdate';
+import {getSigningDeviceName} from '../../utils/getSigningDeviceName';
+import {useLogin, useLoginInfo, useLogout} from '@useelven/core';
+import {GoZap} from "react-icons/go";
+import {FiZapOff} from "react-icons/fi";
 
 interface LoginModalButtonProps {
   onClose?: () => void;
@@ -55,9 +57,9 @@ export const LoginModalButton: FC<LoginModalButtonProps> = ({
   return (
     <>
       {isLoggedIn ? (
-        <ActionButton onClick={logout}>Disconnect</ActionButton>
+        <ActionButton onClick={logout}>Leave <FiZapOff/></ActionButton>
       ) : (
-        <ActionButton onClick={open}>Connect</ActionButton>
+        <ActionButton onClick={open}>Join <GoZap/> </ActionButton>
       )}
       <Modal
         isOpen={opened}

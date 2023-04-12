@@ -7,27 +7,43 @@ import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css';
 import '@fontsource/poppins/800.css';
 import '@fontsource/poppins/900.css';
+import "@fontsource/quicksand"
 
-import type { AppProps } from 'next/app';
-import { ChakraProvider } from '@chakra-ui/react';
-import { useNetworkSync } from '@useelven/core';
-import { theme } from '../config/chakraTheme';
-import { SWRConfig } from 'swr';
-import { useToast } from '@chakra-ui/react';
-import { useCallback } from 'react';
+import type {AppProps} from 'next/app';
+import {ChakraProvider, useToast} from '@chakra-ui/react';
+import {useNetworkSync} from '@useelven/core';
+import {theme} from '../config/chakraTheme';
+import {SWRConfig} from 'swr';
+import {useCallback, useEffect} from 'react';
+import "../styles/style.scss";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const toastId = 'elven-tools-error-toast';
 
-const ElvenToolsDapp = ({ Component, pageProps }: AppProps) => {
+
+
+const ElvenToolsDapp = ({Component, pageProps}: AppProps) => {
   useNetworkSync({
     chainType: process.env.NEXT_PUBLIC_MULTIVERSX_CHAIN,
     ...(process.env.NEXT_PUBLIC_MULTIVERSX_API
-      ? { apiAddress: process.env.NEXT_PUBLIC_MULTIVERSX_API }
+      ? {apiAddress: process.env.NEXT_PUBLIC_MULTIVERSX_API}
       : {}),
     ...(process.env.NEXT_PUBLIC_WC_PROJECT_ID
-      ? { walletConnectV2ProjectId: process.env.NEXT_PUBLIC_WC_PROJECT_ID }
+      ? {walletConnectV2ProjectId: process.env.NEXT_PUBLIC_WC_PROJECT_ID}
       : {}),
   });
+
+  useEffect(() => {
+    AOS.init({
+      easing: "ease-out",
+      once: true,
+      offset: 50,
+      anchorPlacement: "top-bottom"
+    });
+  }, []);
 
   const toast = useToast();
 
@@ -47,7 +63,7 @@ const ElvenToolsDapp = ({ Component, pageProps }: AppProps) => {
   }, [toast]);
 
   return (
-    <SWRConfig value={{ onError: handleErrorToast }}>
+    <SWRConfig value={{onError: handleErrorToast}}>
       <ChakraProvider theme={theme}>
         <Component {...pageProps} />
       </ChakraProvider>

@@ -7,17 +7,16 @@ export const HeaderMenu: FC<PropsWithChildren<PropsWithChildren>> = ({
 }) => {
   return (
     <Box
+      className='header-menu'
       display="flex"
       alignItems="center"
+      zIndex={5}
       justifyContent="space-between"
       flexWrap="wrap"
+      position='fixed'
+      width='100%'
+      padding={{base: '0 50px', xl: '0 5%'}}
       gap="2"
-      py={9}
-      sx={{
-        '@media screen and (max-width: 800px)': {
-          flexDirection: 'column',
-        },
-      }}
     >
       <Logo />
       {children}

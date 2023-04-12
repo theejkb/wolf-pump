@@ -1,0 +1,40 @@
+.woof-map {
+  overflow: hidden;
+  position: relative;
+  background: #000C09;
+  min-height: 100vh;
+  min-width: 100vw;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: url('/woofmap-bg.png') left center no-repeat;
+  background-size: cover;
+
+  h2{
+    z-index: 1;
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  .woofmap-img{
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      max-height: 60vh;
+    }
+  }
+}
+@media screen and (max-width: 764px) {
+  .woof-map {
+    .woofmap-img{
+      width: 100%;
+      padding: 0;
+    }
+  }
+}

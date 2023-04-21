@@ -5,10 +5,11 @@
   position: relative;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background: url('/background.png') 30% center no-repeat;
   background-size: cover;
   font-family: Dopestyle, serif;
+  padding: 5vh 0;
 
   .woof-time{
     display: flex;
@@ -19,7 +20,7 @@
     justify-content: center;
     background: white;
     color: black;
-    position: absolute;
+    position: fixed;
     right: 15px;
     top: 50px;
     gap: 10px;
@@ -29,8 +30,6 @@
   }
 
   h2{
-    position: absolute;
-    top: 100px;
     -webkit-animation: puff-in-center 2s cubic-bezier(0.075, 0.820, 0.165, 1.000) 3.25s both;
     animation: puff-in-center 2s cubic-bezier(0.075, 0.820, 0.165, 1.000) 3.25s both;
   }
@@ -50,8 +49,6 @@
   }
 
   .btn-primary {
-    position: absolute;
-    bottom: 50px;
     -webkit-animation: puff-in-center 1s cubic-bezier(0.075, 0.820, 0.165, 1.000) 2.2s both;
     animation: puff-in-center 1s cubic-bezier(0.075, 0.820, 0.165, 1.000) 2.2s both;
   }

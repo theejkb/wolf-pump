@@ -7,17 +7,35 @@ export const Hero = () => {
 
   const [cpt, setCpt] = useState(0);
   const [isWoofed, setIsWoofed] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(false);
 
 
   const addWoof = () => {
     setIsWoofed(true);
     const woofNumbers: string | null = localStorage.getItem(WOOF_LOCALSTORAGE_KEY);
-    if (woofNumbers) {
-      setCpt(parseInt(woofNumbers, 10) + 1)
-    } else {
-      setCpt(cpt + 1)
+    if (!isDisabled) {
+      if (woofNumbers) {
+        setCpt(parseInt(woofNumbers, 10) + 1)
+      } else {
+        setCpt(cpt + 1)
+      }
+      localStorage.setItem(WOOF_LOCALSTORAGE_KEY, cpt.toString());
+      setIsDisabled(true);
+      setTimeout(() => {
+        setIsDisabled(false);
+      }, 600);
     }
-    localStorage.setItem(WOOF_LOCALSTORAGE_KEY, cpt.toString());
+  }
+
+  function showWoofTimes() {
+    return (
+      <Box className='woof-time' title={'You have Woofed ' + cpt + ' times! Woooooooof !'}><Box
+        className='icon-wolf black'></Box>{cpt} WOOF</Box>
+    )
+  }
+
+  function btnDisabledClass() {
+    return isDisabled ? 'disabled' : '';
   }
 
 
@@ -48,44 +66,44 @@ export const Hero = () => {
       >
         Coming soon
       </Text>
-      <Text
-        as="h1"
-        fontSize={{base: '100px', lg: '13vw'}}
-        textAlign={'center'}
-        lineHeight="shorter"
-        mb={5}
-        className='title-primary'
-        color={'elvenTools.mvx'}
-      >
-        Doggos
-      </Text>
-      <Box className='subtitle'>
+      <Box>
         <Text
           as="h1"
-          fontSize={{base: '50px', lg: '6vw'}}
+          fontSize={{base: '100px', lg: '13vw'}}
           textAlign={'center'}
           lineHeight="shorter"
           mb={5}
+          className='title-primary'
           color={'elvenTools.mvx'}
         >
-          of
+          Doggos
         </Text>
-        <Text
-          as="h1"
-          fontSize={{base: '50px', lg: '6vw'}}
-          textAlign={'center'}
-          lineHeight="shorter"
-          mb={5}
-          color={'elvenTools.mvx'}
-        >
-          MultiversX
-        </Text>
+        <Box className='subtitle'>
+          <Text
+            as="h1"
+            fontSize={{base: '50px', lg: '6vw'}}
+            textAlign={'center'}
+            lineHeight="shorter"
+            mb={5}
+            color={'elvenTools.mvx'}
+          >
+            of
+          </Text>
+          <Text
+            as="h1"
+            fontSize={{base: '50px', lg: '6vw'}}
+            textAlign={'center'}
+            lineHeight="shorter"
+            mb={5}
+            color={'elvenTools.mvx'}
+          >
+            MultiversX
+          </Text>
+        </Box>
       </Box>
-      {cpt && (
-        <Box className='woof-time' title={'You have Woofed ' + cpt + ' times! Woooooooof !'}><Box
-          className='icon-wolf black'></Box>{cpt}</Box>
-      )}
-      <a onClick={addWoof} className='btn-primary'><Box className='icon-wolf green'></Box>WOOF</a>
+      {showWoofTimes()}
+      <a onClick={addWoof} className={'btn-primary ' + btnDisabledClass()}><Box
+        className='icon-wolf green'></Box>WOOF</a>
     </Box>
   );
 };

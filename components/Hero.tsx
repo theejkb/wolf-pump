@@ -81,8 +81,10 @@ export const Hero = () => {
           MultiversX
         </Text>
       </Box>
-
-      <Text className='woof-time' title={'You have Woofed ' + cpt + ' times! Woooooooof !'}><Box className='icon-wolf black'></Box>{cpt}</Text>
+      {cpt && (
+        <Box className='woof-time' title={'You have Woofed ' + cpt + ' times! Woooooooof !'}><Box
+          className='icon-wolf black'></Box>{cpt}</Box>
+      )}
       <a onClick={addWoof} className='btn-primary'><Box className='icon-wolf green'></Box>WOOF</a>
     </Box>
   );

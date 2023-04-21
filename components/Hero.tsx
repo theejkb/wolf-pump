@@ -2,7 +2,7 @@ import {Box, Text} from '@chakra-ui/react';
 import {useEffect, useState} from "react";
 
 export const Hero = () => {
-  const WOOF_LOCALSTORAGE_KEY = 'WoofTime';
+  const WOOFTIME = 'woof';
   const isBrowser = () => typeof window !== 'undefined';
 
   const [cpt, setCpt] = useState(0);
@@ -12,18 +12,18 @@ export const Hero = () => {
 
   const addWoof = () => {
     setIsWoofed(true);
-    const woofNumbers: string | null = localStorage.getItem(WOOF_LOCALSTORAGE_KEY);
+    const woofNumbers: string | null = localStorage.getItem(WOOFTIME);
     if (!isDisabled) {
       if (woofNumbers) {
         setCpt(parseInt(woofNumbers, 10) + 1)
       } else {
         setCpt(cpt + 1)
       }
-      localStorage.setItem(WOOF_LOCALSTORAGE_KEY, cpt.toString());
+      localStorage.setItem(WOOFTIME, cpt.toString());
       setIsDisabled(true);
       setTimeout(() => {
         setIsDisabled(false);
-      }, 600);
+      }, 10000);
     }
   }
 
@@ -43,10 +43,11 @@ export const Hero = () => {
 // à chaque fois que la valeur de "cpt" change
   useEffect(() => {
     if (isWoofed) {
-      localStorage.setItem(WOOF_LOCALSTORAGE_KEY, cpt + '');
+      localStorage.setItem(WOOFTIME, cpt + '');
     }
     if (isBrowser()) {
-      const woofTime = localStorage.getItem(WOOF_LOCALSTORAGE_KEY)
+      const woofTime = localStorage.getItem(WOOFTIME)
+
       if (woofTime) {
         setCpt(parseInt(woofTime, 10));
       } else {

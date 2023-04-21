@@ -9,8 +9,8 @@ export const dappHostname = process.env.NEXT_PUBLIC_DAPP_HOST;
 export const defaultMetaTags = {
   title: 'Doggos of MultiversX',
   description:
-    'Official Website of Doggos of MultiversX. Join the pack now and Woof together !',
-  image: `${dappHostname}/DoggosOFMvx.png`,
+    'Official Website of Doggos of MultiversX. 3 Freemint to won among the best Woofers. Join the pack now and Woof together !',
+  image: `${dappHostname}/website_doggos_reveal.png`,
 };
 
 // FAQ section data

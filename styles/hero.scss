@@ -11,14 +11,26 @@
   font-family: Dopestyle, serif;
 
   .woof-time{
-    font-family: Gobold, sans-serif;
+    display: flex;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: black;
     position: absolute;
-    bottom: 150px;
+    right: 15px;
+    top: 50px;
+    gap: 10px;
+    font-family: Gobold, sans-serif;
     -webkit-animation: puff-in-center 1s cubic-bezier(0.075, 0.820, 0.165, 1.000) 2.7s both;
     animation: puff-in-center 1s cubic-bezier(0.075, 0.820, 0.165, 1.000) 2.7s both;
   }
 
   h2{
+    position: absolute;
+    top: 100px;
     -webkit-animation: puff-in-center 1s cubic-bezier(0.075, 0.820, 0.165, 1.000) 3.25s both;
     animation: puff-in-center 1s cubic-bezier(0.075, 0.820, 0.165, 1.000) 3.25s both;
   }

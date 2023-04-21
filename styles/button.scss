@@ -107,3 +107,24 @@ a {
   }
 }
 
+.icon-wolf {
+  width: 25px;
+  height: 25px;
+  transition: background-image 0.3s ease-in-out;
+
+  &.white {
+    background: url('/wolf-white.png') center center;
+    background-size: cover;
+  }
+
+  &.black {
+    background: url('/wolf-black.png') center center;
+    background-size: cover;
+  }
+
+  &.green {
+    background: url('/wolf-mvx.png') center center;
+    background-size: cover;
+  }
+}
+

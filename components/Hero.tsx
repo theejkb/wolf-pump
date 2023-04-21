@@ -40,6 +40,15 @@ export const Hero = () => {
   return (
     <Box className='hero-container'>
       <Text
+        as="h2"
+        fontSize={{base: '30px', lg: '3vw'}}
+        textAlign={'center'}
+        lineHeight="shorter"
+        color={'elvenTools.mvx'}
+      >
+        Coming soon
+      </Text>
+      <Text
         as="h1"
         fontSize={{base: '100px', lg: '13vw'}}
         textAlign={'center'}
@@ -72,17 +81,10 @@ export const Hero = () => {
           MultiversX
         </Text>
       </Box>
-      <Text
-        as="h2"
-        fontSize={{base: '30px', lg: '3vw'}}
-        textAlign={'center'}
-        lineHeight="shorter"
-        mb={20}
-        color={'elvenTools.mvx'}
-      >
-        Coming soon
-      </Text>
-      <Text className='woof-time'>Woofed {cpt} times</Text>
+      {cpt && (
+        <Box className='woof-time' title={'You have Woofed ' + cpt + ' times! Woooooooof !'}><Box
+          className='icon-wolf black'></Box>{cpt}</Box>
+      )}
       <a onClick={addWoof} className='btn-primary'><Box className='icon-wolf green'></Box>WOOF</a>
     </Box>
   );

@@ -5,26 +5,20 @@ export const Hero = () => {
   const WOOF_LOCALSTORAGE_KEY = 'WoofTime';
   const isBrowser = () => typeof window !== 'undefined';
 
-  const [cpt, setCpt] = useState<number>(0);
+  const [cpt, setCpt] = useState(0);
   const [isWoofed, setIsWoofed] = useState(false);
 
 
   const addWoof = () => {
     setIsWoofed(true);
-    if (isBrowser()) {
-      const woofNumbers: string | null = localStorage.getItem(WOOF_LOCALSTORAGE_KEY);
-      if (woofNumbers) {
-        setCpt(parseInt(woofNumbers, 10) + 1)
-      }
+    const woofNumbers: string | null = localStorage.getItem(WOOF_LOCALSTORAGE_KEY);
+    if (woofNumbers) {
+      setCpt(parseInt(woofNumbers, 10) + 1)
     } else {
-      if (cpt) {
-        setCpt(cpt + 1)
-      }
+      setCpt(cpt + 1)
     }
-    localStorage.setItem(WOOF_LOCALSTORAGE_KEY, cpt + '');
+    localStorage.setItem(WOOF_LOCALSTORAGE_KEY, cpt.toString());
   }
-
-
 
 
   // Utilisation de useEffect pour sauvegarder la valeur dans le local storage
@@ -34,7 +28,12 @@ export const Hero = () => {
       localStorage.setItem(WOOF_LOCALSTORAGE_KEY, cpt + '');
     }
     if (isBrowser()) {
-      setCpt(parseInt(localStorage.getItem(WOOF_LOCALSTORAGE_KEY)!, 10));
+      const woofTime = localStorage.getItem(WOOF_LOCALSTORAGE_KEY)
+      if (woofTime) {
+        setCpt(parseInt(woofTime, 10));
+      } else {
+        setCpt(cpt);
+      }
     }
   }, [cpt, isWoofed]);
 
@@ -73,16 +72,16 @@ export const Hero = () => {
           MultiversX
         </Text>
       </Box>
-        <Text
-          as="h2"
-          fontSize={{base: '30px', lg: '3vw'}}
-          textAlign={'center'}
-          lineHeight="shorter"
-          mb={20}
-          color={'elvenTools.mvx'}
-        >
-          Coming soon
-        </Text>
+      <Text
+        as="h2"
+        fontSize={{base: '30px', lg: '3vw'}}
+        textAlign={'center'}
+        lineHeight="shorter"
+        mb={20}
+        color={'elvenTools.mvx'}
+      >
+        Coming soon
+      </Text>
       <Text className='woof-time'>Woofed {cpt} times</Text>
       <a onClick={addWoof} className='btn-primary'><Box className='icon-wolf green'></Box>WOOF</a>
     </Box>

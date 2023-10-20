@@ -67,7 +67,7 @@ export const Hero = () => {
       >
         Coming soon
       </Text>
-      <Box>
+      <Box className='wolf-box'>
         <Text
           as="h1"
           fontSize={{base: '100px', lg: '13vw'}}

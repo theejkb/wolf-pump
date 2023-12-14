@@ -65,7 +65,7 @@ export const Hero = () => {
         lineHeight="shorter"
         color={'elvenTools.mvx'}
       >
-      <Text as="a" href="https://kyberswap.com/partner-swap?chainId=43114&inputCurrency=0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7&outputCurrency=0x4f94b8aef08c92fefe416af073f1df1e284438ec&clientId=dexscreener&feeReceiver=0x0DA2a82ED2c387d1751ccbAf999A80b65bdb269E&enableTip=true&feeAmount=30&chargeFeeBy=currency_in">Buy now</a>
+      <Text as="a" href="https://kyberswap.com/partner-swap?chainId=43114&inputCurrency=0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7&outputCurrency=0x4f94b8aef08c92fefe416af073f1df1e284438ec&clientId=dexscreener&feeReceiver=0x0DA2a82ED2c387d1751ccbAf999A80b65bdb269E&enableTip=true&feeAmount=30&chargeFeeBy=currency_in">Buy now</Text>
       </Text>
       <Box className='wolf-box'>
       <Text className="btn-buy"></Text>

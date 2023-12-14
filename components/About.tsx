@@ -1,7 +1,6 @@
 import {Box, Heading, Highlight, Stack} from '@chakra-ui/react';
 import {HomeSectionTitle} from "./HomeSectionTitle";
 import React from "react";
-import {BsArrowUpRight} from "react-icons/bs";
 import Link from "next/link";
 
 export const About = () => {

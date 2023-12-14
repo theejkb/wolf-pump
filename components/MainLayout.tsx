@@ -23,6 +23,7 @@ export const MainLayout: FC<PropsWithChildren<MetaHeadProps>> = ({
           <Box>{children}</Box>
         </Container>
       </Box>
+      <Footer></Footer>
     </>
   );
 };

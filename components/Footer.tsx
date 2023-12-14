@@ -49,6 +49,15 @@ export const Footer = () => {
           >
             {'Contribute'}
           </Text>
+          <Text
+            as="a"
+            color="elvenTools.color3.base"
+            href="https://snowtrace.io/address/0x14BFca92B3E4aAA873652bdc41c3b1484c93C56d"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            {'Donation'}
+          </Text>
           <Text fontWeight="hairline"> | </Text>
           <Text
             as="a"

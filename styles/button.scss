@@ -1,6 +1,25 @@
 @import "variables";
 
 a {
+
+  &.btn-buy{
+    font-family: "Gobold", Arial, serif;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: $primary;
+    border: 1px solid $primary;
+    font-weight: bold;
+    border-radius: 15px;
+    letter-spacing: 4px;
+    overflow: hidden;
+    transition: 0.4s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
   &.btn-primary {
     font-family: "Gobold", Arial, serif;
     padding: 15px 30px;
@@ -20,7 +39,7 @@ a {
 
     &.disabled{
       opacity: 0.1;
-      background: rgba(35, 247, 221, 0.38);
+      background: rgba(247, 35, 35, 0.38);
       color: black;
 
       .icon-wolf{
@@ -141,7 +160,7 @@ a {
   }
 
   &.green {
-    background: url('/wolf-mvx.png') center center;
+    background: url('/wolf-white.png') center center;
     background-size: cover;
   }
 }

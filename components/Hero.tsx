@@ -65,9 +65,10 @@ export const Hero = () => {
         lineHeight="shorter"
         color={'elvenTools.mvx'}
       >
-        Coming soon
+      <Text as="a" href="https://kyberswap.com/partner-swap?chainId=43114&inputCurrency=0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7&outputCurrency=0x4f94b8aef08c92fefe416af073f1df1e284438ec&clientId=dexscreener&feeReceiver=0x0DA2a82ED2c387d1751ccbAf999A80b65bdb269E&enableTip=true&feeAmount=30&chargeFeeBy=currency_in">Buy now</a>
       </Text>
       <Box className='wolf-box'>
+      <Text className="btn-buy"></Text>
         <Text
           as="h1"
           fontSize={{base: '100px', lg: '13vw'}}
@@ -77,7 +78,7 @@ export const Hero = () => {
           className='title-primary'
           color={'elvenTools.mvx'}
         >
-          Doggos
+          Wolf
         </Text>
         <Box className='subtitle'>
           <Text
@@ -88,7 +89,7 @@ export const Hero = () => {
             mb={5}
             color={'elvenTools.mvx'}
           >
-            of
+            on
           </Text>
           <Text
             as="h1"
@@ -98,7 +99,17 @@ export const Hero = () => {
             mb={5}
             color={'elvenTools.mvx'}
           >
-            MultiversX
+            Avax
+          </Text>
+          <Text
+            as="h4"
+            fontSize={{base: '50px', lg: '6vw'}}
+            textAlign={'center'}
+            lineHeight="shorter"
+            mb={5}
+            color={'elvenTools.mvx'}
+          >
+            Woof to pump the <a href="https://dexscreener.com/avalanche/0x08db8eafeea89476bfc51b07613f430748ff350a">$WOLF</a>
           </Text>
         </Box>
       </Box>

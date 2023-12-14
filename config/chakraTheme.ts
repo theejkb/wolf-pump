@@ -38,7 +38,7 @@ export const theme = extendTheme({
     elvenTools: {
       bgStripes: '#2c3440',
       shadowColor: '#141414',
-      mvx: '#23f7dd',
+      mvx: '#E84142',
       dark: {
         lighter: '#3c4757',
         base: '#222831',
